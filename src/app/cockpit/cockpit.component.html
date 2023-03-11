@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12">
+      <p><strong>Add new Servers or blueprints!</strong></p>
+      <label>Server Name</label>
+      <!-- Two way data binding ( sign -: "[()]" ) -->
+      <!-- <input type="text" class="form-control" [(ngModel)]="newServerName"> -->
+      <!-- Use of local reference instead of two way binding -->
+      <input 
+        type="text" 
+        class="form-control" 
+        #serverNameInput>
+      <label>Server Content</label>
+      <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent"> -->
+      <!-- Local referencing with viewchild decorator -->
+      <input 
+        type="text" 
+        class="form-control" 
+        #serverContentInput>
+      <br>
+      <!-- Event Binding ( Click is as event. Sign -: "()" ) -->
+      <button
+        class="btn btn-danger"
+        (click)="onAddServer(serverNameInput)">Add Server</button>
+      <button
+        class="btn btn-primary"
+        (click)="onAddBlueprint(serverNameInput)">Add Server Blueprint</button>
+    </div>
+  </div>
